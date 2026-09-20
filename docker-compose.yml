@@ -1,0 +1,9 @@
+# Local run: docker compose up --build   ->  http://localhost:8080
+services:
+  aegisgrid:
+    build: .
+    ports: ["8080:8080"]
+    environment:
+      JWT_SECRET: change-me-locally
+      DEMO_PASSWORD: aegis@2026
+      INGEST_KEY: local-ingest-key   # enables POST /api/ingest/... for the facility-feed demo
